@@ -1,0 +1,38 @@
+.fab {
+    display: none;
+}
+
+.media__search {
+    display: inline;
+    
+    box-sizing: border-box;
+   
+    border-radius: 4px;
+    font-size: 16px;
+    padding-bottom: 8vh;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.media__search:focus {
+    width: 50%;
+    background: white;
+}
+
+.media__search:focus+span {
+    display: none;
+}
+
+/* @media only screen and (max-width: 916px) {
+    .filters {
+        display: none;
+    }
+
+    .fab {
+        display: inline;
+    }
+}
+ */
+

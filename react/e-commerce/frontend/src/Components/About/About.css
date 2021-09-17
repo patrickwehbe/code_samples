@@ -1,0 +1,81 @@
+.about {
+    padding-top: 20vh;
+    font-size: 12px;
+
+}
+
+
+.first__section {
+
+
+    font-size: 12px;
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .first__section>h2 {
+
+        font-family: Inter, sans-serif;
+        color: #000;
+        font-size: 32px;
+
+        font-weight: 600;
+    }
+
+
+
+}
+
+
+
+.second__section {
+
+    height: 25vh;
+}
+
+.second__section>h2 {
+
+
+    font-family: Inter, sans-serif;
+    color: #000;
+    font-size: 48px;
+
+    font-weight: 600;
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .second__section>h2 {
+
+        font-family: Inter, sans-serif;
+        color: #000;
+        font-size: 32px;
+
+        font-weight: 600;
+    }
+
+
+
+}
+
+
+
+.logos img {
+
+    height: 20vh;
+    max-width: 100%;
+    image-rendering: auto;
+    object-fit: contain;
+    padding: 20px;
+}
+
+
+    .faqs__accordion>h4 {
+        text-align: center;
+    
+
+
+
+    }

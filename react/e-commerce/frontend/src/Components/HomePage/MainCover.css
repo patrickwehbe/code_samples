@@ -1,0 +1,32 @@
+.carousel .carousel-item {
+  height: 100vh;
+}
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+}
+.mainCover__category{
+    font-size: 5vh;
+    position: absolute;
+    width: 50%;
+    top: 35vh;
+    left: 25vw;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    
+}
+.mainCover__button{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    
+}
+.mainCover__items{
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    height: 100vh;
+}

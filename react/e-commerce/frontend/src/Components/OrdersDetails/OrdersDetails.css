@@ -1,0 +1,28 @@
+/* .OrderDetails__quantity {
+  position: absolute;
+  top: -50%;
+  left: 340px;
+  background-color: rgba(223, 223, 223, 0.288);
+  border-radius: 20px;
+  width: 60px;
+  height: 50px;
+  box-shadow: 0px 5px 20px -5px rgb(121, 60, 60);
+}
+
+.OrderDetails__size {
+  position: absolute;
+  top: -60px;
+  left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.OrderDetails__color {
+  position: absolute;
+  top: -60px;
+  left: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */

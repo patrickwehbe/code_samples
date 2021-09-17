@@ -1,0 +1,77 @@
+.mainHeader {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  height: 10vh;
+  width: 100%;
+  flex-wrap: nowrap;
+  position: fixed;
+  z-index: 100;
+  padding: 1% 0.5%;
+  justify-content: space-between;
+}
+
+.mainHeader__left {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mainHeader__right {
+  display: flex;
+  align-items: center;
+}
+
+.mainHeader__login {
+  display: flex;
+  align-items: center;
+  font-weight: bolder !important;
+  min-width: 10vw;
+}
+
+.mainHeader__cart {
+  display: flex;
+  align-items: center;
+  outline: none;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  height: 4vh;
+  width: auto;
+  object-fit: contain;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.mainHeader__icons {
+  outline: none !important;
+  font-size: 4vh !important;
+}
+
+.badge {
+  border-radius: 20px;
+  color: black;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 5px 7px;
+  font-size: 20px;
+}
+
+
+
+.MuiDrawer-paper {
+  border-radius: 10px;
+
+}
+@media only screen and (max-width: 600px) {
+  .mainHeader__icons {
+    font-size: 2vh !important;
+  }
+
+  .logo {
+    height: 2vh;
+  }
+}
+

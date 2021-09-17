@@ -1,0 +1,7 @@
+.shops{
+   display: flex;
+    height: 100vh;
+   padding-top: 15vh;
+   width: 90%;
+   margin: auto;
+}

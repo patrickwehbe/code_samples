@@ -1,0 +1,41 @@
+.cart {
+    position: relative;
+    transform: scaleY(0.98);
+  width: 40vw;
+  margin: auto;
+  padding-top: 10vh;
+
+    
+}
+ 
+
+
+.amount span {
+    color: crimson;
+    padding: 0 20px;
+}
+
+.amount button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #777;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    color: crimson;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.total {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+

@@ -1,0 +1,24 @@
+.table_design {
+  background-color: lightslategrey;
+
+  border: 2px solid;
+  border-color: transparent;
+}
+.rows {
+  text-align: center;
+  width: auto;
+  background-color: rgb(238, 238, 238);
+}
+.img {
+  float: left;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-left: 0;
+}
+.btn_action {
+  display: inline;
+  margin: 3px;
+  width: 2cm;
+}

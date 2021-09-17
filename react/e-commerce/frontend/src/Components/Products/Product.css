@@ -1,0 +1,17 @@
+.product {
+    padding: 25px;
+
+}
+
+.product__rating {
+    color: #f0c14b !important;
+}
+
+.shop__info {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    padding-top: 30px;
+    width: 20%;
+    margin: auto;
+}
