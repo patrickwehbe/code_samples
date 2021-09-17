@@ -1,0 +1,2252 @@
+{
+	"info": {
+		"_postman_id": "9ae3c57c-d7ad-4a4b-a20b-35a171f685be",
+		"name": "express-boilerplate-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Value",
+			"item": [
+				{
+					"name": "GET Value",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/value",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"value"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Optional: id of the value",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "t",
+									"description": "Optional: name of the value (not exact match)",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "DESC",
+									"description": "Optional: sorting direction (ASC or DESC)",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "name",
+									"description": "Optional: sort by property (name)",
+									"disabled": true
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "1",
+									"description": "Optional: items per page to display",
+									"disabled": true
+								},
+								{
+									"key": "pageNumber",
+									"value": "0",
+									"description": "Optional: page number (starts at 0)",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Gets all the values from the database."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/value",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"value"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "Optional: id of the value",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "t",
+											"description": "Optional: name of the value (not exact match)",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "DESC",
+											"description": "Optional: sorting direction (ASC or DESC)",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "name",
+											"description": "Optional: sort by property (name)",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "1",
+											"description": "Optional: items per page to display",
+											"disabled": true
+										},
+										{
+											"key": "pageNumber",
+											"value": "0",
+											"description": "Optional: page number (starts at 0)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-kAapCYu9xOwEn2mKp2KcvMhzmG8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Jul 2021 20:40:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"test-1\",\n            \"description\": \"This is test-1\"\n        },\n        {\n            \"id\": \"2\",\n            \"name\": \"test-2\",\n            \"description\": \"This is test-2\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GET Value Meta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/value-meta?itemsPerPage=1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"value-meta"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Optional: id of the value",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "t",
+									"description": "Optional: name of the value (not exact match)",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "DESC",
+									"description": "Optional: sorting direction (ASC or DESC)",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "name",
+									"description": "Optional: sort by property (name)",
+									"disabled": true
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "1",
+									"description": "Optional: items per page to display"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0",
+									"description": "Optional: page number (starts at 0)",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Gets all the values from the database."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/value-meta?id=1&itemsPerPage=1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"value-meta"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "Optional: id of the value"
+										},
+										{
+											"key": "name",
+											"value": "t",
+											"description": "Optional: name of the value (not exact match)",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "DESC",
+											"description": "Optional: sorting direction (ASC or DESC)",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "name",
+											"description": "Optional: sort by property (name)",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "1",
+											"description": "Optional: items per page to display"
+										},
+										{
+											"key": "pageNumber",
+											"value": "0",
+											"description": "Optional: page number (starts at 0)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-CmBFVtqounohRjw4fpolsZtcl/Q\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Jul 2021 20:43:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"itemsPerPage\": 1,\n        \"totalItems\": 1,\n        \"totalPages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET Value by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/value/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"value",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Id of the value that we need to get"
+								}
+							]
+						},
+						"description": "Gets all the values from the database."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/value/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"value",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "Id of the value that we need to get"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"55-rlzRYJ+Ccn0bd+PzxhwA0DQZVPo\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 12:59:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"1\",\n        \"name\": \"test-1\",\n        \"description\": \"This is test-1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "POST Value",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "user",
+								"value": "{{user_identity}}",
+								"description": "Identity of the user that initiated the request",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test-5\",\r\n    \"description\": \"This is test-5\",\r\n    \"organizationId\": \"org-1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/value",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"value"
+							]
+						},
+						"description": "Creates a value in the database."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "user",
+										"value": "{{user_identity}}",
+										"description": "Identity of the user that initiated the request",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test-5\",\r\n    \"description\": \"This is test-5\",\r\n    \"organizationId\": \"org-1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/value",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"value"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-LQBYIq2iTzxiZUhPlF8uzeooDOY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 12:29:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"7132695\",\n        \"name\": \"test-5\",\n        \"description\": \"This is test-5\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "POST Value + File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "nick-test",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"type": "file",
+									"src": "/C:/Users/Owner/Pictures/Picture1.png"
+								},
+								{
+									"key": "organizationId",
+									"value": "org-2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/value/file",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"value",
+								"file"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST Value + File",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "nick-test",
+											"type": "text"
+										},
+										{
+											"key": "filename",
+											"type": "file",
+											"src": "/C:/Users/Owner/Pictures/Picture1.png"
+										},
+										{
+											"key": "organizationId",
+											"value": "org-2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/value/file",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"value",
+										"file"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-NxhCQe6rYMdJSpTVZ/tcwMLw5xo\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 12:37:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"7132933\",\n        \"name\": \"nick-test\"\n    }\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "nick-test",
+											"type": "text"
+										},
+										{
+											"key": "filename",
+											"type": "file",
+											"src": "/C:/Users/Owner/Pictures/Picture1.png"
+										},
+										{
+											"key": "organizationId",
+											"value": "org-2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/value/file",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"value",
+										"file"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"95-Kt9T7p5ctfsKGt7p02KVJJWgu1Q\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 12:39:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"7132997\",\n        \"name\": \"nick-test\",\n        \"fileUrl\": \"https://storage..s3.eu-west-3.amazonaws.com/test-nick/7132997.png\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT Value",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user",
+								"value": "{{user_identity}}",
+								"description": "Identity of the user that initiated the request",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"update-test-5\",\r\n    \"description\": \"Update-5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/value/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"value",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5471286",
+									"description": "Id of the value to update"
+								}
+							]
+						},
+						"description": "Updates a value."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "user",
+										"value": "{{user_identity}}",
+										"description": "Identity of the user that initiated the request",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"update-test-5\",\r\n    \"description\": \"Update-5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/value/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"value",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5471286",
+											"description": "Id of the value to update"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-Z7s//og7AFt4Amc8lyst9QJpUlY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 13:02:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"5471286\",\n        \"name\": \"update-test-5\",\n        \"description\": \"Update-5\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Value",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "user",
+								"value": "{{user_identity}}",
+								"description": "Identity of the user that initiated the request",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/value/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"value",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5470944",
+									"description": "Id of value to delete"
+								}
+							]
+						},
+						"description": "Deletes a value from the database."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "user",
+										"value": "{{user_identity}}",
+										"description": "Identity of the user that initiated the request",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/value/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"value",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5470917",
+											"description": "Id of value to delete"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-BGAEuN9I97lQ7uTndN6MzeujOyE\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 12:52:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"5470917\",\n        \"name\": \"test-5\",\n        \"description\": \"This is test-5\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "A privilege restricts the access to specific routes/features. Privileges are assigned to a workspace member by a root user of an organization. Root users inherit their privileges from the organization's subscription plan.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "API Gateway - Value",
+			"item": [
+				{
+					"name": "GET Value",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/gateway/value",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gateway",
+								"value"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Optional: id of the value",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "t",
+									"description": "Optional: name of the value (not exact match)",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "DESC",
+									"description": "Optional: sorting direction (ASC or DESC)",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "name",
+									"description": "Optional: sort by property (name)",
+									"disabled": true
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "1",
+									"description": "Optional: items per page to display",
+									"disabled": true
+								},
+								{
+									"key": "pageNumber",
+									"value": "0",
+									"description": "Optional: page number (starts at 0)",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Gets all the values from the database."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/gateway/value",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"gateway",
+										"value"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "Optional: id of the value",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "t",
+											"description": "Optional: name of the value (not exact match)",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "DESC",
+											"description": "Optional: sorting direction (ASC or DESC)",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "name",
+											"description": "Optional: sort by property (name)",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "1",
+											"description": "Optional: items per page to display",
+											"disabled": true
+										},
+										{
+											"key": "pageNumber",
+											"value": "0",
+											"description": "Optional: page number (starts at 0)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-kAapCYu9xOwEn2mKp2KcvMhzmG8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Jul 2021 20:40:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"test-1\",\n            \"description\": \"This is test-1\"\n        },\n        {\n            \"id\": \"2\",\n            \"name\": \"test-2\",\n            \"description\": \"This is test-2\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GET Value by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/gateway/value/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gateway",
+								"value",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Id of the value that we need to get"
+								}
+							]
+						},
+						"description": "Gets all the values from the database."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/gateway/value/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"gateway",
+										"value",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "Id of the value that we need to get"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"55-rlzRYJ+Ccn0bd+PzxhwA0DQZVPo\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 12:59:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"1\",\n        \"name\": \"test-1\",\n        \"description\": \"This is test-1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "POST Value",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "user",
+								"value": "{{user_identity}}",
+								"description": "Identity of the user that initiated the request",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test-5\",\r\n    \"description\": \"This is test-5\",\r\n    \"organizationId\": \"org-1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/gateway/value",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gateway",
+								"value"
+							]
+						},
+						"description": "Creates a value in the database."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "user",
+										"value": "{{user_identity}}",
+										"description": "Identity of the user that initiated the request",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test-5\",\r\n    \"description\": \"This is test-5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/gateway/value",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"gateway",
+										"value"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-xta9TohXiv960uN3X+T9x3zoNNQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 13:02:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"5471286\",\n        \"name\": \"test-5\",\n        \"description\": \"This is test-5\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "POST Value + File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "organizationId",
+									"value": "org-6",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "nick-test",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"type": "file",
+									"src": "/C:/Users/Owner/Pictures/Picture1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/gateway/value/file",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gateway",
+								"value",
+								"file"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "nick-test",
+											"type": "text"
+										},
+										{
+											"key": "filename",
+											"type": "file",
+											"src": "/C:/Users/Owner/Pictures/Picture1.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/gateway/value/file",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"gateway",
+										"value",
+										"file"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a2-iinvH/GCmjFsEHnhcM1HADYOZIo\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Jul 2021 14:32:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"7018877\",\n        \"name\": \"nick-test\",\n        \"fileUrl\": \"https://storage..tech.s3.eu-west-3.amazonaws.com/test-nick/Picture1.png_7018877.png\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT Value",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user",
+								"value": "{{user_identity}}",
+								"description": "Identity of the user that initiated the request",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"update-test-5\",\r\n    \"description\": \"Update-5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/gateway/value/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gateway",
+								"value",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5471286",
+									"description": "Id of the value to update"
+								}
+							]
+						},
+						"description": "Updates a value."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "user",
+										"value": "{{user_identity}}",
+										"description": "Identity of the user that initiated the request",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"update-test-5\",\r\n    \"description\": \"Update-5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/gateway/value/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"gateway",
+										"value",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5471286",
+											"description": "Id of the value to update"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-Z7s//og7AFt4Amc8lyst9QJpUlY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 13:02:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"5471286\",\n        \"name\": \"update-test-5\",\n        \"description\": \"Update-5\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Value",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "user",
+								"value": "{{user_identity}}",
+								"description": "Identity of the user that initiated the request",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/gateway/value/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gateway",
+								"value",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5470944",
+									"description": "Id of value to delete"
+								}
+							]
+						},
+						"description": "Deletes a value from the database."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "user",
+										"value": "{{user_identity}}",
+										"description": "Identity of the user that initiated the request",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/gateway/value/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"gateway",
+										"value",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5470917",
+											"description": "Id of value to delete"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-BGAEuN9I97lQ7uTndN6MzeujOyE\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 12:52:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"5470917\",\n        \"name\": \"test-5\",\n        \"description\": \"This is test-5\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "A privilege restricts the access to specific routes/features. Privileges are assigned to a workspace member by a root user of an organization. Root users inherit their privileges from the organization's subscription plan.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,732 @@
+{
+    "components": {
+        "schemas": {
+            "Model": {
+                "properties": {
+                    "_id": {
+                        "type": "string"
+                    },
+                    "_key": {
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "type": "number"
+                    },
+                    "createdBy": {
+                        "type": "string"
+                    },
+                    "modifiedAt": {
+                        "type": "number"
+                    },
+                    "modifiedBy": {
+                        "type": "string"
+                    },
+                    "deletedAt": {
+                        "type": "number"
+                    },
+                    "deletedBy": {
+                        "type": "string"
+                    },
+                    "isActive": {
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            },
+            "Asset": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "url"
+                ]
+            },
+            "PaginationMetaResponse": {
+                "properties": {
+                    "itemsPerPage": {
+                        "type": "number"
+                    },
+                    "totalItems": {
+                        "type": "number"
+                    },
+                    "totalPages": {
+                        "type": "number"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "itemsPerPage",
+                    "totalItems",
+                    "totalPages"
+                ]
+            },
+            "ValueResponse": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "GetQueryParams": {
+                "properties": {
+                    "itemsPerPage": {
+                        "pattern": "^[-+]?[0-9]+$",
+                        "type": "string"
+                    },
+                    "pageNumber": {
+                        "pattern": "^[-+]?[0-9]+$",
+                        "type": "string"
+                    },
+                    "sort": {
+                        "items": {
+                            "enum": [
+                                "ASC",
+                                "DESC"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "sortBy": {
+                        "items": {
+                            "enum": [
+                                "name"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "GetValueQuery": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "itemsPerPage": {
+                        "pattern": "^[-+]?[0-9]+$",
+                        "type": "string"
+                    },
+                    "pageNumber": {
+                        "pattern": "^[-+]?[0-9]+$",
+                        "type": "string"
+                    },
+                    "sort": {
+                        "items": {
+                            "enum": [
+                                "ASC",
+                                "DESC"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "sortBy": {
+                        "items": {
+                            "enum": [
+                                "name"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "ValueGetMetaRequest": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "itemsPerPage": {
+                        "type": "number"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "itemsPerPage"
+                ]
+            },
+            "ValuePostRequest": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "organizationId": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "organizationId"
+                ]
+            },
+            "ValuePutRequest": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "info": {
+        "title": "boilerplate-express-service API",
+        "version": "0.0.1",
+        "description": "Generated with `routing-controllers-openapi`"
+    },
+    "openapi": "3.0.0",
+    "paths": {
+        "/gateway/value": {
+            "get": {
+                "operationId": "APIGatwayController.getAll",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/ValueResponse"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "No value found in database"
+                    }
+                },
+                "summary": "List all available values",
+                "tags": [
+                    "API Gatway"
+                ]
+            },
+            "post": {
+                "operationId": "APIGatwayController.post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValuePostRequest"
+                            }
+                        }
+                    },
+                    "description": "ValuePostRequest",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValueResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                },
+                "summary": "Create a new value",
+                "tags": [
+                    "API Gatway"
+                ]
+            }
+        },
+        "/gateway/value/{id}": {
+            "get": {
+                "operationId": "APIGatwayController.getOne",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValueResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "No value found in database"
+                    }
+                },
+                "summary": "Get specific value by id",
+                "tags": [
+                    "API Gatway"
+                ]
+            },
+            "put": {
+                "operationId": "APIGatwayController.put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValuePutRequest"
+                            }
+                        }
+                    },
+                    "description": "ValuePutRequest",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValueResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "No value found in database"
+                    }
+                },
+                "summary": "Update a new value",
+                "tags": [
+                    "API Gatway"
+                ]
+            },
+            "delete": {
+                "operationId": "APIGatwayController.delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValueResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "Value not found"
+                    }
+                },
+                "summary": "Delete a value",
+                "tags": [
+                    "API Gatway"
+                ]
+            }
+        },
+        "/gateway/value/file": {
+            "post": {
+                "operationId": "APIGatwayController.addValueWithFile",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValuePostRequest"
+                            }
+                        }
+                    },
+                    "description": "ValuePostRequest",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValueResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "description": "Unable to upload the file"
+                    }
+                },
+                "summary": "Upload file and create new Value in the database",
+                "tags": [
+                    "API Gatway"
+                ]
+            }
+        },
+        "/value": {
+            "get": {
+                "operationId": "ValueController.getAll",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "itemsPerPage",
+                        "schema": {
+                            "pattern": "^[-+]?[0-9]+$",
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "pageNumber",
+                        "schema": {
+                            "pattern": "^[-+]?[0-9]+$",
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "sort",
+                        "schema": {
+                            "items": {
+                                "enum": [
+                                    "ASC",
+                                    "DESC"
+                                ],
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortBy",
+                        "schema": {
+                            "items": {
+                                "enum": [
+                                    "name"
+                                ],
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/ValueResponse"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "No value found in database"
+                    }
+                },
+                "summary": "List all available values",
+                "tags": [
+                    "Value"
+                ]
+            },
+            "post": {
+                "operationId": "ValueController.post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValuePostRequest"
+                            }
+                        }
+                    },
+                    "description": "ValuePostRequest",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValueResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                },
+                "summary": "Create a new value",
+                "tags": [
+                    "Value"
+                ]
+            }
+        },
+        "/value-meta": {
+            "get": {
+                "operationId": "ValueController.getValueCount",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "itemsPerPage",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "name",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "itemsPerPage",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PaginationMetaResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "Can't get the metadata"
+                    }
+                },
+                "summary": "Get meta data for pagination",
+                "tags": [
+                    "Value"
+                ]
+            }
+        },
+        "/value/{id}": {
+            "get": {
+                "operationId": "ValueController.getOne",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValueResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "No value found in database"
+                    }
+                },
+                "summary": "Get specific value by id",
+                "tags": [
+                    "Value"
+                ]
+            },
+            "put": {
+                "operationId": "ValueController.put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValuePutRequest"
+                            }
+                        }
+                    },
+                    "description": "ValuePutRequest",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValueResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "No value found in database"
+                    }
+                },
+                "summary": "Update a new value",
+                "tags": [
+                    "Value"
+                ]
+            },
+            "delete": {
+                "operationId": "ValueController.delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Value"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "Value not found"
+                    }
+                },
+                "summary": "Delete a value",
+                "tags": [
+                    "Value"
+                ]
+            }
+        },
+        "/value/file": {
+            "post": {
+                "operationId": "ValueController.addValueWithFile",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValuePostRequest"
+                            }
+                        }
+                    },
+                    "description": "ValuePostRequest",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValueResponse"
+                                }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "400": {
+                        "description": "Unable to upload the file"
+                    }
+                },
+                "summary": "Upload file and create new Value in the database",
+                "tags": [
+                    "Value"
+                ]
+            }
+        }
+    }
+}
